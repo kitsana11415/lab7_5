@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table, th, td {
+        border:1px solid black;
+      }
+      </style>
+    <script>
+		function Add() {
+				var name = document.getElementById('t1')
+				var add = document.getElementById('t2')
+				var tel = document.getElementById('t3')
+
+				var td1 = document.createElement('td')
+				td1.innerHTML = name.value
+				var td2 = document.createElement('td')
+				td2.innerHTML = add.value
+				var td3 = document.createElement('td')
+				td3.innerHTML = tel.value
+
+				var Table = document.getElementById('Table')
+				var tr = document.createElement('tr')
+
+				tr.append(td1)
+				tr.append(td2)
+				tr.append(td3)
+				Table.append(tr)
+			}
+		
+    </script>
+</head>
+<body>
+    <p>ชื่อลูกค้า</p>
+    <input id="t1" type="text">
+    <p>ที่อยู่</p>
+    <input id="t2" type="text">
+    <p>โทรศัพท์</p>
+    <input id="t3" type="text">
+    <button onclick="Add()"
+
+    type="button">Go</button> <br>
+
+    <table id="Table">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพท์</th>
+        </tr>
+        
+
+    </table>
+
+
+</body>
+</html>
